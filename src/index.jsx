@@ -14,6 +14,10 @@ const App = () => {
     { name: "Lubomír Poňuchálek", avatar: '/assets/candidate04.png' },
   ]), []);
   
+  const newPresident = (president) => {
+    setPresident(president)
+  }
+
   return (
     <div className="container">
       <div className="castle">
@@ -35,6 +39,7 @@ const App = () => {
             key={c.name}
             name={c.name} 
             avatar={c.avatar} 
+            president = {newPresident}
           />
         ))}
       </div>
